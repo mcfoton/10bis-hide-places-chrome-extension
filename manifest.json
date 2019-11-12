@@ -1,0 +1,21 @@
+{
+    "name": "10bis hide shitty places",
+    "version": "0.1",
+    "description": "Never order from Mitbahon again",
+    "background": {
+      "scripts": ["background.js"],
+      "persistent": false
+    },
+    "manifest_version": 2,
+     "permissions": [
+      "activeTab",
+      "storage"
+    ],
+    "content_scripts": [
+    {
+        "matches": ["https://www.10bis.co.il/*"],
+        "js": ["/content_script.js"],
+        "run_at": "document_idle"
+    }
+]
+}
